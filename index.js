@@ -25,10 +25,10 @@ const Contact = (req,res) =>{
 
 
 //routes
-server.use('/Products',Products)
-server.use('/Gallery', Gallery)
+server.post('/Products',Products)
+server.get('/Gallery', Gallery)
 server.use('/About', About)
-server.use('/Contact', Contact)
+server.patch('/Contact', Contact)
 server.use('/',Homepage)
 
 
