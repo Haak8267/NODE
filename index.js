@@ -64,15 +64,21 @@ const loginPage =(req,res)=>{
     res.send('Thank you')
 }
 
+const signUp =(req,res)=>{
+    console.log(req.body)
+    res.send('Thank you for submitting')
+}
+
 
 //routes
 // server.use(logger)
 server.use('/Products',logger1, Products)
-server.use('/login',loginPage)
+server.post('/login',loginPage)
+server.use('/Signup',signUp)
 server.use('/Gallery', Gallery)
-server.use('/About', About)
-server.use('/Contact', delivering)
-server.use('/',serving)
+server.patch('/About', About)
+server.get('/Contact', delivering)
+server.use('/',serving,)
 
 
 // starting server
