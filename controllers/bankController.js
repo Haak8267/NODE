@@ -1,5 +1,5 @@
 const BankModel = require('../model/bankModel');
-const{validationResult} = require('express-validator');
+const{ validationResult } = require('express-validator');
 
 // bank controllers
 const  createBankController = async (req,res)=>{
@@ -38,7 +38,7 @@ const retrieveBankController = async (req,res)=>{
 
      if (id) {
         // retrieve bank by id
-        banks = await BankModel.findById(id);
+        bank = await BankModel.findById(id);
         }
 
      else if (name){

@@ -1,4 +1,4 @@
-const {createAccountController} = require('../controller/accountController');
+const {createAccountController} = require('../controllers/accountController');
 
 const express = require('express');
 
